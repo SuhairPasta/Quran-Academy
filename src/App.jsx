@@ -6,6 +6,7 @@ import Home from '@/pages/Home';
 import Courses from '@/pages/Courses';
 
 import Enroll from '@/pages/Enroll';
+import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import Contact from '@/pages/Contact';
 
 function App() {
@@ -16,9 +17,9 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
-
           <Route path="/enroll" element={<Enroll />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>

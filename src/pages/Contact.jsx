@@ -12,25 +12,36 @@ export default function Contact() {
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({ student_name: '', email: '', notes: '' });
 
+  const [error, setError] = useState('');
+
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
+    setError('');
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      console.log('Contact form submitted:', { ...form, status: 'pending' });
-      setSent(true);
+      const res = await fetch('/api/send_contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSent(true);
+      } else {
+        setError(data.message || 'Something went wrong. Please try again.');
+      }
     } catch (err) {
-      console.error(err);
+      setError('Network error. Please check your connection and try again.');
     } finally {
       setSubmitting(false);
     }
   };
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'info@noorquranacademy.com' },
-    { icon: Phone, label: 'Phone', value: '+92 (311) 324-6161' },
+    { icon: Mail, label: 'Email', value: 'hafizismail125125@gmail.com' },
+    { icon: Phone, label: 'Phone', value: '+92 (300) 111-3101' },
     { icon: Clock, label: 'Hours', value: 'Available 24/7 Worldwide' },
     { icon: MapPin, label: 'Location', value: 'Online — Worldwide' },
   ];
@@ -95,6 +106,9 @@ export default function Contact() {
                   className="w-full rounded-full bg-emerald-800 hover:bg-emerald-900 py-6 text-base font-semibold">
                   {submitting ? <><Loader2 className="animate-spin mr-2" size={18} /> Sending...</> : <>Send Message <Send className="ml-2" size={18} /></>}
                 </Button>
+                {error && (
+                  <p className="text-red-600 text-sm text-center mt-2">{error}</p>
+                )}
               </form>
             )}
           </ScrollReveal>

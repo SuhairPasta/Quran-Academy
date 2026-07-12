@@ -17,17 +17,28 @@ export default function Enroll() {
     course_interest: '', preferred_days: '', preferred_time: '', notes: ''
   });
 
+  const [error, setError] = useState('');
+
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
+    setError('');
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      console.log('Enrollment form submitted:', form);
-      setSubmitted(true);
+      const res = await fetch('/api/send_enroll', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError(data.message || 'Something went wrong. Please try again.');
+      }
     } catch (err) {
-      console.error(err);
+      setError('Network error. Please check your connection and try again.');
     } finally {
       setSubmitting(false);
     }
@@ -81,7 +92,7 @@ export default function Enroll() {
                 </div>
                 <div>
                   <Label htmlFor="phone">Phone</Label>
-                  <Input id="phone" name="phone" value={form.phone} onChange={handleChange} className="mt-1.5" placeholder="+92 (311) 324-6161" />
+                  <Input id="phone" name="phone" value={form.phone} onChange={handleChange} className="mt-1.5" placeholder="+92 (300) 111-3101" />
                 </div>
                 <div>
                   <Label htmlFor="country">Country</Label>
@@ -119,6 +130,9 @@ export default function Enroll() {
                 className="w-full rounded-full bg-amber-500 hover:bg-amber-600 text-emerald-950 py-6 text-base font-semibold">
                 {submitting ? <><Loader2 className="animate-spin mr-2" size={18} /> Submitting...</> : <>Submit Registration <ArrowRight className="ml-2" size={18} /></>}
               </Button>
+              {error && (
+                <p className="text-red-600 text-sm text-center mt-2">{error}</p>
+              )}
             </form>
           </ScrollReveal>
         </div>

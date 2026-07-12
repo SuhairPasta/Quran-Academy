@@ -9,12 +9,15 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
           <div>
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <span className="w-11 h-11 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-arabic text-emerald-950 text-2xl">ق</span>
-              <span className="font-display text-2xl font-semibold text-white">Noor Academy</span>
+              <img src="public/final logo.png" width="80px" alt="Logo" />
+              <span className="font-display text-2xl font-semibold text-white">Quran & Skills institute</span>
             </Link>
-            <p className="text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed mb-6">
               Bringing the light of Quran education to students worldwide through personalized online classes with certified instructors.
             </p>
+            <Link to="/privacy-policy" className="text-sm text-emerald-100/50 hover:text-amber-400 transition-colors">
+              Privacy Policy
+            </Link>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
@@ -30,11 +33,11 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-amber-400 shrink-0" />
-                <a href="mailto:info@noorquranacademy.com" className="hover:text-amber-400 transition-colors">info@noorquranacademy.com</a>
+                <a href="mailto:hafizismail125125@gmail.com" className="hover:text-amber-400 transition-colors">hafizismail125125@gmail.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-amber-400 shrink-0" />
-                <a href="tel:+923113246161" className="hover:text-amber-400 transition-colors">+92 (311) 324-6161</a>
+                <a href="tel:+923113246161" className="hover:text-amber-400 transition-colors">+92 (300) 111-3101</a>
               </li>
               <li className="flex items-center gap-3"><MapPin size={16} className="text-amber-400 shrink-0" /> Online — Worldwide</li>
             </ul>
@@ -42,8 +45,8 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Follow Us</h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="https://www.facebook.com/Hafizismail11" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Facebook</a></li>
-              <li><a href="#" className="hover:text-amber-400 transition-colors">Instagram</a></li>
+              <li><a href="https://www.facebook.com/hafizismailmustafai" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Facebook</a></li>
+              <li><a href="https://www.instagram.com/ismailkhan125125?igsh=MTQ4bThnYWsyMDh2bQ==" className="hover:text-amber-400 transition-colors">Instagram</a></li>
               <li><a href="https://www.youtube.com/@HafizIsmailQuranTeacher" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">YouTube</a></li>
             </ul>
           </div>

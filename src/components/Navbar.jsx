@@ -29,9 +29,9 @@ export default function Navbar() {
     }`}>
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <span className="w-11 h-11 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-arabic text-emerald-950 text-2xl shadow-md">ق</span>
+          <img src="public/final logo.png" width="90px" alt="Logo" />
           <span className={`font-display text-2xl font-semibold tracking-tight transition-colors ${solid ? 'text-emerald-950' : 'text-white'}`}>
-            Noor Academy
+            Quran & Skills institute
           </span>
         </Link>
 

@@ -29,7 +29,7 @@ export default function Navbar() {
     }`}>
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <img src="/public/final logo.png" width="90px" alt="Logo" />
+          <img src="https://raw.githubusercontent.com/SuhairPasta/Quran-Academy/refs/heads/main/public/final%20logo.png" width="90px" alt="Logo" />
           <span className={`font-display text-2xl font-semibold tracking-tight transition-colors ${solid ? 'text-emerald-950' : 'text-white'}`}>
             Quran & Skills institute
           </span>

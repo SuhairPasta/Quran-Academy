@@ -125,10 +125,10 @@ export default function Home() {
               </h3>
               <div className="mt-8 space-y-5 text-muted-foreground leading-relaxed text-lg">
                 <p>
-                  At Noor Academy, we are dedicated to bringing the authentic teachings of the Quran to students across the globe. Through our interactive online classes, we bridge the distance between eager learners and expert educators.
+                  At Noor Academy, we bring the authentic teachings of the Quran to students across the globe through personalized, one-on-one online classes. From the very beginning with the Noorani Qaidah, to perfecting Tajweed and completing the blessed journey of Hifz e Quran, we provide a structured and supportive learning environment for students of all ages.
                 </p>
                 <p>
-                  Whether you are starting from the very beginning with the Noorani Qaidah, perfecting your recitation with proper Tajweed, or embarking on the blessed journey of Hifz e Quran (Memorization), we provide a structured and supportive environment.
+                  Beyond teaching students, we also empower Quran teachers worldwide. We train qualified Qaris on how to grow their own online teaching practice — from running targeted Meta (Facebook & Instagram) advertisements to attract students, all the way through setting up and delivering professional online classes. If you are a Quran teacher looking to build your student base and take your teaching online, we will show you exactly how to do it.
                 </p>
               </div>
             </ScrollReveal>

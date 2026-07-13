@@ -1,0 +1,16 @@
+{
+  "name": "Quran & Skills Institute",
+  "short_name": "Quran Academy",
+  "description": "Learn the Quran online with certified instructors. Personalized one-on-one classes for Tajweed, Hifz, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#064e3b",
+  "theme_color": "#064e3b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

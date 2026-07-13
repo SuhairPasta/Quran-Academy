@@ -101,20 +101,29 @@ export default function Home() {
       {/* ABOUT US */}
       <section className="py-24 bg-emerald-50/40">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <SectionHeading eyebrow="About Us" title="Spreading the Light of Quran Worldwide" />
-          <div className="mt-16 grid lg:grid-cols-2 gap-16 items-center">
+          <ScrollReveal className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-amber-600">
+              <span className="w-8 h-px bg-current opacity-50" />
+              About Us
+              <span className="w-8 h-px bg-current opacity-50" />
+            </div>
+          </ScrollReveal>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <div className="relative">
-                <div className="absolute inset-0 bg-emerald-900/10 rounded-3xl transform translate-x-4 translate-y-4" />
                 <img 
-                  src="https://images.unsplash.com/photo-1609599006353-e629aaab315d?auto=format&fit=crop&q=80&w=800" 
-                  alt="Reading the Quran" 
-                  className="relative rounded-3xl object-cover w-full h-[450px] shadow-sm"
+                  src="/about-quran.png" 
+                  alt="About Noor Quran Academy" 
+                  className="relative rounded-3xl object-cover w-full h-[450px]"
                 />
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <div className="space-y-5 text-muted-foreground leading-relaxed text-lg">
+              <h3 className="font-display text-4xl md:text-5xl font-semibold text-emerald-950 leading-tight">
+                Spreading the Light of Quran Worldwide
+              </h3>
+              <div className="mt-8 space-y-5 text-muted-foreground leading-relaxed text-lg">
                 <p>
                   At Noor Academy, we are dedicated to bringing the authentic teachings of the Quran to students across the globe. Through our interactive online classes, we bridge the distance between eager learners and expert educators.
                 </p>

@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
           <div>
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src="public/final logo.png" width="80px" alt="Logo" />
+              <img src="/public/final logo.png" width="80px" alt="Logo" />
               <span className="font-display text-2xl font-semibold text-white">Quran & Skills institute</span>
             </Link>
             <p className="text-sm leading-relaxed mb-6">

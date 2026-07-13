@@ -37,10 +37,10 @@ module.exports = async function handler(req, res) {
     </td></tr>` : '';
 
   const mailOptions = {
-    from: `"Noor Quran Academy" <${SMTP_EMAIL}>`,
+    from: `"Quran & Skills institute" <${SMTP_EMAIL}>`,
     to: RECIPIENT_EMAIL,
     replyTo: email,
-    subject: `🎓 New Enrollment Request from ${student_name} — Noor Quran Academy`,
+    subject: `🎓 New Enrollment Request from ${student_name} — Quran & Skills institute`,
     html: `
 <!DOCTYPE html>
 <html lang="en">
@@ -51,8 +51,8 @@ module.exports = async function handler(req, res) {
       <table width="620" cellpadding="0" cellspacing="0" style="max-width:620px;width:100%;">
         <tr>
           <td style="background:linear-gradient(135deg,#064e3b 0%,#065f46 100%);border-radius:16px 16px 0 0;padding:40px 40px 30px;text-align:center;">
-            <div style="display:inline-block;width:52px;height:52px;background:linear-gradient(135deg,#f59e0b,#d97706);border-radius:50%;line-height:52px;font-size:26px;color:#064e3b;font-weight:bold;margin-bottom:16px;">ق</div>
-            <h1 style="margin:0;color:#ffffff;font-size:24px;font-weight:700;">Noor Quran Academy</h1>
+            <img src="https://raw.githubusercontent.com/SuhairPasta/Quran-Academy/refs/heads/main/public/final%20logo.png" width="52px" alt="Logo" />
+            <h1 style="margin:0;color:#ffffff;font-size:24px;font-weight:700;">Quran & Skills institute</h1>
             <p style="margin:8px 0 0;color:#a7f3d0;font-size:14px;">New Enrollment Request Received</p>
           </td>
         </tr>
@@ -114,7 +114,7 @@ module.exports = async function handler(req, res) {
         </tr>
         <tr>
           <td style="background:#064e3b;border-radius:0 0 16px 16px;padding:24px 40px;text-align:center;">
-            <p style="margin:0;color:#6ee7b7;font-size:13px;">© ${new Date().getFullYear()} Noor Quran Academy — All rights reserved</p>
+            <p style="margin:0;color:#6ee7b7;font-size:13px;">© ${new Date().getFullYear()} Quran & Skills institute — All rights reserved</p>
             <p style="margin:6px 0 0;color:#34d399;font-size:12px;">This email was sent via your website enrollment form</p>
           </td>
         </tr>
